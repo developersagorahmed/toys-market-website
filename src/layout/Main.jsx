@@ -1,9 +1,12 @@
 import React from "react";
+import Navbar from "../Sheard/Navbar/Navbar.jsx";
+import { Outlet } from "react-router-dom";
 
 const Main = () => {
 	return (
 		<div>
-			<h1>This is main</h1>
+			<Navbar></Navbar>
+			<Outlet></Outlet>
 		</div>
 	);
 };
