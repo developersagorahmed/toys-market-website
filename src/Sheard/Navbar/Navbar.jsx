@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/Action-Toys-logo.jpg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 	return (
@@ -32,29 +33,29 @@ const Navbar = () => {
 			<div className="navbar-center hidden lg:flex">
 				<ul className="menu menu-horizontal px-1">
 					<li>
-						<a className="text-white hover:text-red-800 font-bold text-lg">
+						<Link to='/home' className="text-white hover:text-red-800 font-bold text-lg">
 							Home
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a className="text-white hover:text-red-800 font-bold text-lg">
+						<Link to='/allToys' className="text-white hover:text-red-800 font-bold text-lg">
 							All Toys
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a className="text-white hover:text-red-800 font-bold text-lg">
+						<Link to="/myToys" className="text-white hover:text-red-800 font-bold text-lg">
 							My Toys
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a className="text-white hover:text-red-800 font-bold text-lg">
+						<Link to="/addAtoys" className="text-white hover:text-red-800 font-bold text-lg">
 							Add a Toy
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a className="text-white hover:text-red-800 font-bold text-lg">
+						<Link to="/blogs" className="text-white hover:text-red-800 font-bold text-lg">
 							Blogs
-						</a>
+						</Link>
 					</li>
 				</ul>
 			</div>
