@@ -95,7 +95,7 @@ const Navbar = () => {
 					{user ? (
 						<>
 							<div className="w-12 mr-9 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-								<img src="https://i.ibb.co/bbScCNF/1671894808582.jpg" />
+								<img src={user ? user.photoURL : <></>} />
 							</div>
 						</>
 					) : (
