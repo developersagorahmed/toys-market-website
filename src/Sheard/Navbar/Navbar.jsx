@@ -33,27 +33,42 @@ const Navbar = () => {
 			<div className="navbar-center hidden lg:flex">
 				<ul className="menu menu-horizontal px-1">
 					<li>
-						<Link to='/home' className="text-white hover:text-red-800 font-bold text-lg">
+						<Link
+							to="/home"
+							className="text-white hover:text-red-800 font-bold text-lg"
+						>
 							Home
 						</Link>
 					</li>
 					<li>
-						<Link to='/allToys' className="text-white hover:text-red-800 font-bold text-lg">
+						<Link
+							to="/allToys"
+							className="text-white hover:text-red-800 font-bold text-lg"
+						>
 							All Toys
 						</Link>
 					</li>
 					<li>
-						<Link to="/myToys" className="text-white hover:text-red-800 font-bold text-lg">
+						<Link
+							to="/myToys"
+							className="text-white hover:text-red-800 font-bold text-lg"
+						>
 							My Toys
 						</Link>
 					</li>
 					<li>
-						<Link to="/addAtoys" className="text-white hover:text-red-800 font-bold text-lg">
+						<Link
+							to="/addAToys"
+							className="text-white hover:text-red-800 font-bold text-lg"
+						>
 							Add a Toy
 						</Link>
 					</li>
 					<li>
-						<Link to="/blogs" className="text-white hover:text-red-800 font-bold text-lg">
+						<Link
+							to="/blogs"
+							className="text-white hover:text-red-800 font-bold text-lg"
+						>
 							Blogs
 						</Link>
 					</li>
@@ -64,6 +79,21 @@ const Navbar = () => {
 					<div className="w-12 mr-9 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
 						<img src="https://i.ibb.co/bbScCNF/1671894808582.jpg" />
 					</div>
+					<ul className="menu menu-horizontal px-1">
+						<li>
+							<Link
+								className="text-white hover:text-red-800 font-bold text-lg"
+								to="/login"
+							>
+								LogIn
+							</Link>
+						</li>
+						<li>
+							<Link className="text-white hover:text-red-800 font-bold text-lg">
+								Logout
+							</Link>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
