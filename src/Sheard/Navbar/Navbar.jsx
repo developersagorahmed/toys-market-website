@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../../assets/Action-Toys-logo.jpg";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 
 const Navbar = () => {
+	const { user, logOut } = useContext(AuthContext);
+	const handleLogOut = () => {
+		logOut()
+			.then()
+			.catch((error) => {
+				console.log(error);
+			});
+	};
 	return (
 		<div className="navbar bg-[#1D1427]">
 			<div className="navbar-start">
@@ -48,22 +57,29 @@ const Navbar = () => {
 							All Toys
 						</Link>
 					</li>
-					<li>
-						<Link
-							to="/myToys"
-							className="text-white hover:text-red-800 font-bold text-lg"
-						>
-							My Toys
-						</Link>
-					</li>
-					<li>
-						<Link
-							to="/addAToys"
-							className="text-white hover:text-red-800 font-bold text-lg"
-						>
-							Add a Toy
-						</Link>
-					</li>
+
+					{user ? (
+						<>
+							<li>
+								<Link
+									to="/myToys"
+									className="text-white hover:text-red-800 font-bold text-lg"
+								>
+									My Toys
+								</Link>
+							</li>
+							<li>
+								<Link
+									to="/addAToys"
+									className="text-white hover:text-red-800 font-bold text-lg"
+								>
+									Add a Toy
+								</Link>
+							</li>
+						</>
+					) : (
+						<></>
+					)}
 					<li>
 						<Link
 							to="/blogs"
@@ -76,23 +92,39 @@ const Navbar = () => {
 			</div>
 			<div className="navbar-end">
 				<div className="avatar">
-					<div className="w-12 mr-9 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-						<img src="https://i.ibb.co/bbScCNF/1671894808582.jpg" />
-					</div>
+					{user ? (
+						<>
+							<div className="w-12 mr-9 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+								<img src="https://i.ibb.co/bbScCNF/1671894808582.jpg" />
+							</div>
+						</>
+					) : (
+						<></>
+					)}
 					<ul className="menu menu-horizontal px-1">
-						<li>
-							<Link
-								className="text-white hover:text-red-800 font-bold text-lg"
-								to="/login"
-							>
-								LogIn
-							</Link>
-						</li>
-						<li>
-							<Link className="text-white hover:text-red-800 font-bold text-lg">
-								Logout
-							</Link>
-						</li>
+						{user ? (
+							<>
+								<li>
+									<button
+										onClick={handleLogOut}
+										className="text-white hover:text-red-800 font-bold text-lg"
+									>
+										Logout
+									</button>
+								</li>
+							</>
+						) : (
+							<>
+								<li>
+									<Link
+										to="/login"
+										className="text-white hover:text-red-800 font-bold text-lg"
+									>
+										LogIn
+									</Link>
+								</li>
+							</>
+						)}
 					</ul>
 				</div>
 			</div>
