@@ -1,11 +1,43 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import signInImg from "../../assets/login_page_img/signup.png";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 const SignIn = () => {
-	const { handleGoogleSignIn } = useContext(AuthContext);
+	const { handleGoogleSignIn, registerUser } = useContext(AuthContext);
+
+	const [error, setError] = useState("");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	const [photo, setPhoto] = useState("");
+	const [name, setName] = useState("");
+
+	const handleRegister = (event) => {
+		event.preventDefault();
+		if (password.length < 6) {
+			setError("Password mush be 6 characters");
+			return;
+		}
+		setError("");
+		if ((photo, email, password)) {
+			registerUser(email, password)
+				.then((result) => {
+					const currentUser = result.user;
+					console.log(currentUser);
+
+					updateProfile(currentUser, { displayName: name, photoURL: photo });
+					setError("");
+					event.target.reset();
+					Navigate("/");
+				})
+				.catch((err) => {
+					setError(err.message);
+				});
+		}
+	};
+
 	const handleGoogleLogin = () => {
 		handleGoogleSignIn()
 			.then((result) => {
@@ -24,18 +56,21 @@ const SignIn = () => {
 					<div className="text-center lg:text-left">
 						<img className="w-[600px]" src={signInImg} />
 					</div>
-					<form className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+					<form
+						onSubmit={handleRegister}
+						className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
+					>
 						<div className="card-body">
+							<p className="text-red-600 font-semibold">{error}</p>
 							<div className="form-control">
 								<label className="label">
 									<span className="label-text">Name</span>
 								</label>
 								<input
-									onChange={(e) => setEmail(e.target.value)}
+									onChange={(e) => setName(e.target.value)}
 									type="text"
 									placeholder="Name"
 									className="input input-bordered"
-									required
 								/>
 							</div>
 							<div className="form-control">
@@ -67,11 +102,10 @@ const SignIn = () => {
 									<span className="label-text">Photo URL</span>
 								</label>
 								<input
-									onChange={(e) => setEmail(e.target.value)}
+									onChange={(e) => setPhoto(e.target.value)}
 									type="text"
 									placeholder="Photo URL"
 									className="input input-bordered"
-									required
 								/>
 							</div>
 							<label className="label">

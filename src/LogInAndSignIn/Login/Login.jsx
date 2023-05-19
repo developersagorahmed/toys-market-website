@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 
 const Login = () => {
+	const { signIn, handleGoogleSignIn } = useContext(AuthContext);
 	const [error, setError] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	const { signIn, handleGoogleSignIn } = useContext(AuthContext);
 
 	const logInSubmit = (event) => {
 		event.preventDefault();
@@ -16,6 +16,7 @@ const Login = () => {
 			signIn(email, password)
 				.then((result) => {
 					const user = result.user;
+					console.log(user);
 					event.target.reset();
 				})
 				.catch((error) => setError(error));
@@ -25,6 +26,7 @@ const Login = () => {
 		handleGoogleSignIn()
 			.then((result) => {
 				const user = result.user;
+				setError("");
 				console.log(user);
 			})
 			.catch((error) => setError(error.message));
@@ -41,10 +43,11 @@ const Login = () => {
 						<img className="w-[600px]" src={loginImg} />
 					</div>
 					<form
-						onClick={logInSubmit}
+						onSubmit={logInSubmit}
 						className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
 					>
 						<div className="card-body">
+							<p className="text-red-700">{error}</p>
 							<div className="form-control">
 								<label className="label">
 									<span className="label-text">Email</span>
