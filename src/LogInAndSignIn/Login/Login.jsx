@@ -1,14 +1,18 @@
 import React, { useContext, useState } from "react";
 import loginImg from "../../assets/login_page_img/login_page.png";
 import { FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import ReactTitle from "../../Sheard/ReactTitle/ReactTitle";
 
 const Login = () => {
 	const { signIn, handleGoogleSignIn } = useContext(AuthContext);
 	const [error, setError] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const navigate = useNavigate();
+	const location = useLocation();
+	const from = location.state?.from?.pathname || "/";
 
 	const logInSubmit = (event) => {
 		event.preventDefault();
@@ -16,6 +20,7 @@ const Login = () => {
 			signIn(email, password)
 				.then((result) => {
 					const user = result.user;
+					navigate(from);
 					console.log(user);
 					event.target.reset();
 				})
@@ -27,6 +32,7 @@ const Login = () => {
 			.then((result) => {
 				const user = result.user;
 				setError("");
+				navigate(from);
 				console.log(user);
 			})
 			.catch((error) => setError(error.message));
@@ -34,6 +40,7 @@ const Login = () => {
 
 	return (
 		<div className="bg-[#EFEAE6]">
+			<ReactTitle title="Login"></ReactTitle>
 			<h1 className="underline mx-auto text-center pt-12 text-5xl font-bold">
 				Login now
 			</h1>

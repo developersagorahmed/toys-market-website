@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useForm } from "react-hook-form";
 import "./AddToys.css";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
+import ReactTitle from "../../Sheard/ReactTitle/ReactTitle";
 
 const AddAToys = () => {
 	const { user } = useContext(AuthContext);
@@ -33,6 +34,7 @@ const AddAToys = () => {
 
 	return (
 		<div className="toy-form mt-10">
+			<ReactTitle title="Add A Toys"></ReactTitle>
 			<h2 className="text-2xl font-bold underline">Add a New Toy</h2>
 
 			<form className="forms" onSubmit={handleSubmit(onSubmit)}>

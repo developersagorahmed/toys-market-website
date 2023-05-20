@@ -4,6 +4,7 @@ import { FaGoogle } from "react-icons/fa";
 import { Link, Navigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import ReactTitle from "../../Sheard/ReactTitle/ReactTitle";
 
 const SignIn = () => {
 	const { handleGoogleSignIn, registerUser } = useContext(AuthContext);
@@ -48,6 +49,7 @@ const SignIn = () => {
 	};
 	return (
 		<div className="bg-[#EFEAE6]">
+			<ReactTitle title="SignIn"></ReactTitle>
 			<h1 className="mx-auto underline text-center pt-12 text-5xl font-bold">
 				Sign In
 			</h1>
