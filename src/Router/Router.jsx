@@ -11,6 +11,7 @@ import Login from "../LogInAndSignIn/Login/Login";
 import SignIn from "../LogInAndSignIn/SignIn/SignIn";
 import Details from "../Home/Details/Details";
 import PrivateRoute from "../Provider/PrivateRouter/PrivateRouter";
+import UpdateToy from "../Home/Home/UpdateToy/UpdateToy";
 
 const router = createBrowserRouter([
 	{
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
 			{
 				path: "/signIn",
 				element: <SignIn></SignIn>,
+			},
+			{
+				path: "updateToy/:id",
+				element:<UpdateToy></UpdateToy>,
+				loader:()=>fetch()
 			},
 			{
 				path: "/details/:id",
