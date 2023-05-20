@@ -1,0 +1,62 @@
+"https://i.ibb.co/pnw3h70/51uy-Ts-FDTXL.jpg"
+			
+"https://i.ibb.co/0J7w4KK/51-Xa-SYy-TJL.jpg"
+		
+"https://i.ibb.co/BNbRzX7/61hm-MVVu-JEL-SX450.jpg"
+"https://i.ibb.co/ynmFNQt/71-D6v-Sk-NS2-L-SY450.jpg"
+
+"https://i.ibb.co/DpLsFF8/71i9vxpm-JWL-SL1500.jpg"
+"https://i.ibb.co/5LM9LBh/71-Xboxd-V4-RL-SL1500.jpg"
+"https://i.ibb.co/S5xDR6x/81v-Ha-G01m6-L-SL1500.jpg"
+"https://i.ibb.co/Fq0mrZ4/81y-JVh8-WUq-L-SL1500.jpg"
+
+import { useState } from "react";
+
+const Tabs = () => {
+	const [activeTab, setActiveTab] = useState("");
+	const handleTabName = (tabName) => {
+		
+		setActiveTab(tabName);
+		console.log(activeTab);
+	};
+	return (
+		<div className="flex mb-8 justify-center">
+			<div className="tabs">
+				<a
+					onClick={() => handleTabName("avenger")}
+					className={`tab text-xl tab-bordered ${
+						activeTab ? "tab-active" : ""
+					}`}
+				>
+					Avenger
+				</a>
+				<a
+					onClick={() => handleTabName("star")}
+					className={`tab text-xl  tab-bordered ${
+						activeTab == "star" ? "tab-active" : ""
+					}`}
+				>
+					Star Wars
+				</a>
+				<a
+					onClick={() => handleTabName("transformer")}
+					className={`tab  text-xl tab-bordered ${
+						activeTab == "transformer" ? "tab-active" : ""
+					}`}
+				>
+					Transformer
+				</a>
+			</div>
+		</div>
+	);
+};
+
+export default Tabs;
+
+
+
+     
+
+
+
+

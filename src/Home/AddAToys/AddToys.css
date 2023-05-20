@@ -1,0 +1,65 @@
+.toy-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  .toy-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .toy-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .toy-form input,
+  .toy-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .toy-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .toy-form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  .submit-btn{
+    width: 60%;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(33, 33, 115);
+    color: white;
+    font-size:18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    border-radius: 2px;
+}
+.submit-btn:hover{
+    background-color: rgb(25, 25, 193);
+}
+
+
+.forms p{
+  margin-top: 25px;
+}
