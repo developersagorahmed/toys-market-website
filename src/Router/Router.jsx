@@ -9,6 +9,7 @@ import MyToys from "../Home/MyToys/MyToys";
 import AddAToys from "../Home/AddAToys/AddAToys";
 import Login from "../LogInAndSignIn/Login/Login";
 import SignIn from "../LogInAndSignIn/SignIn/SignIn";
+import Details from "../Home/Details/Details";
 
 const router = createBrowserRouter([
 	{
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
 		errorElement: <ErrorPage></ErrorPage>,
 		children: [
 			{
-				path: "/home",
+				path: "/",
 				element: <Home></Home>,
 			},
 			{
@@ -43,6 +44,12 @@ const router = createBrowserRouter([
 			{
 				path: "/signIn",
 				element: <SignIn></SignIn>,
+			},
+			{
+				path: "/details/:id",
+				element: <Details></Details>,
+				loader: ({ params }) =>
+					fetch(`http://localhost:5000/details/${params.id}`),
 			},
 		],
 	},

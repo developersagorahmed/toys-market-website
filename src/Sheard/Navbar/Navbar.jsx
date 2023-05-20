@@ -44,7 +44,7 @@ const Navbar = () => {
 				<ul className="menu menu-horizontal px-1">
 					<li>
 						<Link
-							to="/home"
+							to="/"
 							className="text-white hover:text-red-800 font-bold text-lg"
 						>
 							Home
