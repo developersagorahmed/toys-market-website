@@ -1,4 +1,6 @@
 import React, { useContext, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useForm } from "react-hook-form";
 import "./AddToys.css";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
@@ -12,15 +14,20 @@ const AddAToys = () => {
 
 		formState: { errors },
 	} = useForm();
-	const onSubmit = (data) => {
+	const onSubmit = (data, event) => {
 		fetch("http://localhost:5000/addtoy", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(data),
 		})
-		.then(res=>res.json())
-		.then(data=>console.log(data))		
-		;
+			.then((res) => res.json())
+			.then((data) => {
+				if (data.acknowledged) {
+					toast("Your Toy added");
+				}
+				console.log(data);
+				event.target.reset();
+			});
 		console.log(data);
 	};
 
@@ -114,6 +121,7 @@ const AddAToys = () => {
 
 				<input className="submit-btn" value="Add Toy" type="submit" />
 			</form>
+			<ToastContainer />
 		</div>
 	);
 };

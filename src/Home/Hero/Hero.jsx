@@ -8,7 +8,7 @@ const Hero = () => {
 	return (
 		<>
 			<div
-				className="hero mt-6 h-[80vh] "
+				className="sm:hidden hero mt-6 md:h-[80vh] "
 				style={{ backgroundImage: `url(${avngerPhoto})` }}
 			>
 				<div className="hero-overlay bg-opacity-60"></div>
