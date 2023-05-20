@@ -95,8 +95,11 @@ const Navbar = () => {
 				<div className="avatar">
 					{user ? (
 						<>
-							<div className="w-12 mr-9 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-								<img src={user ? user.photoURL : <></>} />
+							<div className="w-12 mt-2 h-12 mr-9 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+								<img
+									title={user.displayName}
+									src={user ? user.photoURL : <></>}
+								/>
 							</div>
 						</>
 					) : (

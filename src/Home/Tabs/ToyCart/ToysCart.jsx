@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Rating } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
 
 const ToysCart = ({ toy }) => {
 	const { _id, photoURL, toyName, price, rating } = toy || {};
@@ -19,7 +21,7 @@ const ToysCart = ({ toy }) => {
 							{price}
 						</div>
 						<div className="badge badge-outline text-xl font-bold p-5">
-							{rating}
+							<Rating style={{ maxWidth: 100 }} value={rating} readOnly />
 						</div>
 					</div>
 					<div className="mx-auto mt-5 ">

@@ -3,7 +3,7 @@ import ToysCart from "./ToyCart/ToysCart";
 
 const Tabs = () => {
 	const [toys, setToys] = useState([]);
-	const [activeTab, setActiveTab] = useState("avenger");
+	const [activeTab, setActiveTab] = useState("Avengers");
 	console.log(activeTab);
 
 	useEffect(() => {
