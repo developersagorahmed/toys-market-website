@@ -79,7 +79,7 @@ const AddAToys = () => {
 						Select Category
 					</option>
 					<option value="Avengers">Avengers</option>
-					<option value="Star  Wars">Star Wars</option>
+					<option value="StarWars">Star Wars</option>
 					<option value="Transformer">Transformer</option>
 				</select>
 
