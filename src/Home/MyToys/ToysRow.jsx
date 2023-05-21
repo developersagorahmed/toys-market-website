@@ -1,4 +1,3 @@
-import React from "react";
 import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 
@@ -6,7 +5,7 @@ import { AiFillDelete } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const ToysRow = ({ toy }) => {
+const ToysRow = ({ toy, toys, setToys }) => {
 	const {
 		_id,
 		toyName,
@@ -19,8 +18,6 @@ const ToysRow = ({ toy }) => {
 		photoURL,
 	} = toy;
 	const handleDelete = (_id) => {
-		console.log(_id);
-
 		Swal.fire({
 			title: "Are you sure?",
 			text: "You won't be able to revert this!",
@@ -38,6 +35,8 @@ const ToysRow = ({ toy }) => {
 					.then((data) => console.log(data));
 				if (data.deletedCount > 0) {
 					Swal.fire("Deleted!", "Your Toys has been deleted.", "success");
+					const remaining = toys.filter((tooy) => tooy._id !== _id);
+					setToys(remaining);
 				}
 			}
 		});
@@ -71,7 +70,7 @@ const ToysRow = ({ toy }) => {
 				<td>{quantity} Pics</td>
 				<th>
 					<Link
-						to={`updateToy/${_id}`}
+						to={`/myToys/updateToy/${_id}`}
 						className="btn rounded-md bg-black text-white font-bold hover:text-black hover:bg-[#ffbd03]"
 					>
 						Edit

@@ -72,7 +72,7 @@ const SignIn = () => {
 									onChange={(e) => setName(e.target.value)}
 									type="text"
 									placeholder="Name"
-									className="input input-bordered"
+									className="input  w-full rounded-md input-bordered"
 								/>
 							</div>
 							<div className="form-control">
@@ -83,7 +83,7 @@ const SignIn = () => {
 									onChange={(e) => setEmail(e.target.value)}
 									type="email"
 									placeholder="email"
-									className="input input-bordered"
+									className="input  w-full rounded-md input-bordered"
 									required
 								/>
 							</div>
@@ -95,7 +95,7 @@ const SignIn = () => {
 									onChange={(e) => setPassword(e.target.value)}
 									type="password"
 									placeholder="password"
-									className="input input-bordered"
+									className="input w-full rounded-md  input-bordered"
 									required
 								/>
 							</div>
@@ -107,7 +107,7 @@ const SignIn = () => {
 									onChange={(e) => setPhoto(e.target.value)}
 									type="text"
 									placeholder="Photo URL"
-									className="input input-bordered"
+									className="input w-full rounded-md  input-bordered"
 								/>
 							</div>
 							<label className="label">

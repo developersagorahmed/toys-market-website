@@ -5,7 +5,7 @@ import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 
 const Navbar = () => {
 	const { user, logOut } = useContext(AuthContext);
-	console.log(user);
+
 	const handleLogOut = () => {
 		logOut()
 			.then()
@@ -52,7 +52,7 @@ const Navbar = () => {
 					</li>
 					<li>
 						<Link
-							to="/allToys"
+							to="/alltoys"
 							className="text-white hover:text-red-800 font-bold text-lg"
 						>
 							All Toys

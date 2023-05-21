@@ -63,7 +63,7 @@ const Login = () => {
 									onChange={(e) => setEmail(e.target.value)}
 									type="email"
 									placeholder="email"
-									className="input input-bordered"
+									className="input w-full rounded-md input-bordered"
 									required
 								/>
 							</div>
@@ -75,7 +75,7 @@ const Login = () => {
 									onChange={(e) => setPassword(e.target.value)}
 									type="password"
 									placeholder="password"
-									className="input input-bordered"
+									className="input w-full rounded-md  input-bordered"
 									required
 								/>
 								<label className="label">

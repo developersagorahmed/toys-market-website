@@ -17,9 +17,7 @@ const MyToys = () => {
 		<div className="my-16">
 			<ReactTitle title="My Toys"></ReactTitle>
 			<div>
-				<div>
-					
-				</div>
+				<div></div>
 				<div className="overflow-x-auto w-full">
 					<table className="table w-full">
 						<thead>
