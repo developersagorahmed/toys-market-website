@@ -7,7 +7,7 @@ const ToysCart = ({ toy }) => {
 	const { _id, photoURL, toyName, price, rating } = toy || {};
 
 	return (
-		<div className="container mx-auto mb-9 md:ml-20 mt-9">
+		<div data-aos="flip-left" className="container mx-auto mb-9 md:ml-20 mt-9">
 			<div className="card w-96 bg-base-100 shadow-xl">
 				<figure>
 					<img className="h-[300px]" src={photoURL} alt="Shoes" />

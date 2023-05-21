@@ -1,7 +1,7 @@
 const Gallery = () => {
 	return (
 		<div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 my-8">
-			<div className="card w-96 bg-base-100 shadow-xl">
+			<div className="card w-96 bg-base-100 shadow-xl " data-aos="fade-right">
 				<figure>
 					<img
 						className="h-full w-full"
@@ -10,7 +10,7 @@ const Gallery = () => {
 					/>
 				</figure>
 			</div>
-			<div className="card w-96 bg-base-100 shadow-xl">
+			<div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-left">
 				<figure>
 					<img
 						className="h-full w-full"
@@ -19,7 +19,7 @@ const Gallery = () => {
 					/>
 				</figure>
 			</div>
-			<div className="card w-96 bg-base-100 shadow-xl">
+			<div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-right">
 				<figure>
 					<img
 						className="h-full w-full"
@@ -28,7 +28,7 @@ const Gallery = () => {
 					/>
 				</figure>
 			</div>
-			<div className="card w-96 bg-base-100 shadow-xl">
+			<div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-left">
 				<figure>
 					<img
 						className="h-full w-full"
@@ -37,7 +37,7 @@ const Gallery = () => {
 					/>
 				</figure>
 			</div>
-			<div className="card w-96 bg-base-100 shadow-xl">
+			<div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-right">
 				<figure>
 					<img
 						className="h-full w-full"
@@ -46,7 +46,7 @@ const Gallery = () => {
 					/>
 				</figure>
 			</div>
-			<div className="card w-96 bg-base-100 shadow-xl">
+			<div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-left">
 				<figure>
 					<img
 						className="h-full w-full"
@@ -55,7 +55,7 @@ const Gallery = () => {
 					/>
 				</figure>
 			</div>
-			<div className="card w-96 bg-base-100 shadow-xl">
+			<div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-right">
 				<figure>
 					<img
 						className="h-full w-full"
@@ -64,7 +64,7 @@ const Gallery = () => {
 					/>
 				</figure>
 			</div>
-			<div className="card w-96 bg-base-100 shadow-xl">
+			<div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-right">
 				<figure>
 					<img
 						className="h-full w-full"
@@ -73,7 +73,7 @@ const Gallery = () => {
 					/>
 				</figure>
 			</div>
-			<div className="card w-96 bg-base-100 shadow-xl">
+			<div className="card w-96 bg-base-100 shadow-xl" data-aos="fade-left">
 				<figure>
 					<img
 						className="h-full w-full"

@@ -8,7 +8,7 @@ const AboutUs = () => {
 				<h1 className=" rounded-lg  mb-5 bg-black p-6 text-center text-5xl font-bold underline  text-[#F9AA01]">
 					Our Location
 				</h1>
-				<div className="mb-6 pb-6 chef-cart  mx-auto">
+				<div className="mb-6 pb-6 chef-cart  mx-auto" data-aos="fade-up-left">
 					<div className="bg-[black] text-white card lg:card-side shadow-xl">
 						<figure>
 							<img
@@ -69,7 +69,10 @@ const AboutUs = () => {
 			<h1 className=" rounded-lg  mb-5 bg-black p-6 mx-auto w-2/4 text-center text-5xl font-bold underline  text-[#F9AA01]">
 				About Us
 			</h1>
-			<div className="pb-14 hero min-h-screen bg-white">
+			<div
+				data-aos="fade-down-right"
+				className="pb-14 hero min-h-screen bg-white"
+			>
 				<div className="hero-content flex-col lg:flex-row">
 					<img
 						src="https://i.ibb.co/ZKxqwWZ/about-7.jpg"
@@ -88,40 +91,42 @@ const AboutUs = () => {
 							whether you are here for a business lunch or dinner. Discover new
 							tastes and inspired recipes from all over the world.
 						</p>
-						<button className="about-btn">About Us</button>
+						<button className="btn rounded-md bg-[#F9AA01] text-[black] font-bold hover:text-white">
+							About Us
+						</button>
 					</div>
 				</div>
 			</div>
 			<div>
-				<div className="container">
+				<div data-aos="zoom-in" className="container">
 					<section className="  mb-24 pt-5">
 						<h2 className="text-[#F9AA01] text-3xl font-bold text-center mb-10 underline">
 							Trusted By
 						</h2>
-						<div className="flex items-center gap-5 ui-container flex-wrap">
+						<div className="flex items-center  gap-5 ui-container flex-wrap">
 							<img
 								className="w-[200px] mt-6 md:mt-auto mx-auto"
-								src="https://i.ibb.co/GQtppfK/Uber-Eats.png"
+								src="https://i.ibb.co/pZLchg7/pngfind-com-flipkart-logo-png-3288902.png"
 								alt=""
 							/>
 							<img
 								className="w-[200px] mt-6 md:mt-auto mx-auto"
-								src="https://i.ibb.co/jgxZCrV/DoorDash.png"
+								src="https://i.ibb.co/wsfLg56/Shopee-logo-PNG1.png"
 								alt=""
 							/>
 							<img
 								className="w-[200px] mt-6 md:mt-auto mx-auto"
-								src="https://i.ibb.co/f8d2K78/Swiggy-Logo-Vector.png"
+								src="https://i.ibb.co/cJ98XHD/Best-Buy-logo-PNG18.png"
 								alt=""
 							/>
 							<img
 								className="w-[200px] mt-6 md:mt-auto mx-auto"
-								src="https://i.ibb.co/nsvC37k/KFC-LOGO.png"
+								src="https://i.ibb.co/sVrfbwB/kisspng-ebay-sales-retail-customer-e-commerce-ebay-5b26ddca3ecb21-9701226115292738022572.png"
 								alt=""
 							/>
 							<img
 								className="w-[200px] mt-6 md:mt-auto mx-auto"
-								src="https://i.ibb.co/9Z8dmjt/Foodpanda-Logo-wine.png"
+								src="https://i.ibb.co/dWgXRhK/Daco-5848619.png"
 								alt=""
 							/>
 						</div>

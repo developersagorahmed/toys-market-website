@@ -4,6 +4,7 @@ import { FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 import ReactTitle from "../../Sheard/ReactTitle/ReactTitle";
+import Swal from "sweetalert2";
 
 const Login = () => {
 	const { signIn, handleGoogleSignIn } = useContext(AuthContext);
@@ -20,6 +21,14 @@ const Login = () => {
 			signIn(email, password)
 				.then((result) => {
 					const user = result.user;
+					if (user) {
+						Swal.fire({
+							title: "Success",
+							text: "Log In Successful",
+							icon: "success",
+							confirmButtonText: "cool",
+						});
+					}
 					navigate(from);
 					console.log(user);
 					event.target.reset();
@@ -32,6 +41,12 @@ const Login = () => {
 			.then((result) => {
 				const user = result.user;
 				setError("");
+				Swal.fire({
+					title: "Success",
+					text: "Log In Successful",
+					icon: "success",
+					confirmButtonText: "cool",
+				});
 				navigate(from);
 				console.log(user);
 			})

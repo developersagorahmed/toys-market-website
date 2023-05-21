@@ -60,7 +60,6 @@ const AddAToys = () => {
 					className="text-input"
 					{...register("sellerName")}
 					placeholder="Seller Name"
-					value={user?.displayName}
 					defaultValue={user.displayName}
 				/>
 				<br />
@@ -69,7 +68,6 @@ const AddAToys = () => {
 					className="text-input"
 					{...register("sellerEmail")}
 					placeholder="Seller Email"
-					value={user.email}
 					defaultValue={user?.email}
 				/>
 				<br />
@@ -92,7 +90,7 @@ const AddAToys = () => {
 					className="text-input"
 					{...register("price")}
 					placeholder="Price"
-					type="number"
+					type="text"
 				/>
 				<p className="text-base font-bold">Rating</p>
 				<input

@@ -37,8 +37,12 @@ const Navbar = () => {
 				<a>
 					<div className="rounded-lg ml-6">
 						<div className="flex justify-center items-center">
-							<img className="w-18 h-20 rounded-lg" src={logo} alt="" />
-							<h1 className="text-4xl text-[#F9AA01] ml-4 font-bold ">
+							<img
+								className="hidden md:block w-18 h-20 rounded-lg"
+								src={logo}
+								alt=""
+							/>
+							<h1 className=" text-4xl text-[#F9AA01] ml-4 font-bold ">
 								Action <br />
 								<span className="text-white">Toys</span>
 							</h1>

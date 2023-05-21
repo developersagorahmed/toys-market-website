@@ -1,12 +1,15 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./UpdateToy.css";
-import { useLoaderData } from "react-router-dom";
+import {  useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateToy = () => {
 	const toy = useLoaderData();
+	const navigate = useNavigate();
+
 	console.log(toy);
+
 	const { description, quantity, price, _id } = toy;
 	const {
 		register,
@@ -17,8 +20,8 @@ const UpdateToy = () => {
 
 	const onSubmit = (data, event) => {
 		event.preventDefault();
-		console.log(data);
 
+		console.log(data);
 		fetch(`http://localhost:5000/myToys/updateToy/${_id}`, {
 			method: "PUT",
 			headers: { "content-Type": "application/json" },
@@ -34,6 +37,7 @@ const UpdateToy = () => {
 						icon: "success",
 						confirmButtonText: "cool",
 					});
+					navigate("/myToys");
 				}
 			});
 	};
@@ -50,7 +54,7 @@ const UpdateToy = () => {
 						{...register("price")}
 						placeholder="Price"
 						defaultValue={price}
-						type="number"
+						type="text"
 					/>
 
 					<p className="text-base font-bold">Available Quantity</p>
