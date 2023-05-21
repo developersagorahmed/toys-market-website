@@ -83,13 +83,13 @@ const AboutUs = () => {
 							ABOUT US
 						</h1>
 						<h4 className="py-6 aboutSub ">
-							Welcome to Dina, a modern restaurant with a focus on premium food
-							tastes
+							Welcome to Action Toys, a modern Toys Shop with a focus on premium
+							toys
 						</h4>
 						<p className="aboutDes">
-							We invite you to celebrate our restaurant's delicious recipes
-							whether you are here for a business lunch or dinner. Discover new
-							tastes and inspired recipes from all over the world.
+							We invite you to bye our toys shops products whether you are here
+							for a business To sell. Discover new enjoy and good toys from all
+							over the world.
 						</p>
 						<button className="btn rounded-md bg-[#F9AA01] text-[black] font-bold hover:text-white">
 							About Us
