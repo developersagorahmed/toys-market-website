@@ -13,10 +13,10 @@ const Hero = () => {
 			>
 				<div className="hero-overlay bg-opacity-60"></div>
 				<div className="hero-content  text-neutral-content">
-					<div className="pr-[500px]">
-						<h1 className="mb-5 text-white text-7xl font-bold">
+					<div className="md:pr-[500px]">
+						<h1 className="mb-5 text-[#F9AA01] text-7xl font-bold">
 							{" "}
-							Collection of <br /> Avengers Toys
+							Collection of <br /> Avengers Star Wars and Transformer Toys
 						</h1>
 
 						<button className="btn rounded-md bg-[#F9AA01] border-none text-lg font-bold text-[#1D1427] btn-primary">

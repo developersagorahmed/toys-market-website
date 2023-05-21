@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import "./AddToys.css";
 import { AuthContext } from "../../Provider/AuthProvider/AuthProvider";
 import ReactTitle from "../../Sheard/ReactTitle/ReactTitle";
+import { Navigate } from "react-router-dom";
 
 const AddAToys = () => {
 	const { user } = useContext(AuthContext);
@@ -28,6 +29,7 @@ const AddAToys = () => {
 				}
 				console.log(data);
 				event.target.reset();
+				<Navigate to="/myToys"></Navigate>;
 			});
 		console.log(data);
 	};

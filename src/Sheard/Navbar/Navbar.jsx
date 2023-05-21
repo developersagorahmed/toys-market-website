@@ -36,7 +36,13 @@ const Navbar = () => {
 				</div>
 				<a>
 					<div className="rounded-lg ml-6">
-						<img className="w-18 h-20 rounded-lg" src={logo} alt="" />
+						<div className="flex justify-center items-center">
+							<img className="w-18 h-20 rounded-lg" src={logo} alt="" />
+							<h1 className="text-4xl text-[#F9AA01] ml-4 font-bold ">
+								Action <br />
+								<span className="text-white">Toys</span>
+							</h1>
+						</div>
 					</div>
 				</a>
 			</div>
@@ -45,7 +51,7 @@ const Navbar = () => {
 					<li>
 						<Link
 							to="/"
-							className="text-white hover:text-red-800 font-bold text-lg"
+							className="text-white hover:text-[#F9AA01] font-bold text-lg"
 						>
 							Home
 						</Link>
@@ -53,7 +59,7 @@ const Navbar = () => {
 					<li>
 						<Link
 							to="/alltoys"
-							className="text-white hover:text-red-800 font-bold text-lg"
+							className="text-white hover:text-[#F9AA01] font-bold text-lg"
 						>
 							All Toys
 						</Link>
@@ -64,7 +70,7 @@ const Navbar = () => {
 							<li>
 								<Link
 									to="/myToys"
-									className="text-white hover:text-red-800 font-bold text-lg"
+									className="text-white hover:text-[#F9AA01] font-bold text-lg"
 								>
 									My Toys
 								</Link>
@@ -72,7 +78,7 @@ const Navbar = () => {
 							<li>
 								<Link
 									to="/addAToys"
-									className="text-white hover:text-red-800 font-bold text-lg"
+									className="text-white hover:text-[#F9AA01] font-bold text-lg"
 								>
 									Add a Toy
 								</Link>
@@ -84,7 +90,7 @@ const Navbar = () => {
 					<li>
 						<Link
 							to="/blogs"
-							className="text-white hover:text-red-800 font-bold text-lg"
+							className="text-white hover:text-[#F9AA01] font-bold text-lg"
 						>
 							Blogs
 						</Link>

@@ -3,6 +3,7 @@ import Tabs from "../Tabs/Tabs";
 import Hero from "../Hero/Hero";
 import Gallery from "./Gallery/Gallery";
 import ReactTitle from "../../Sheard/ReactTitle/ReactTitle";
+import AboutUs from "../AboutUs/AboutUs";
 
 const Home = () => {
 	return (
@@ -14,6 +15,7 @@ const Home = () => {
 			</h1>
 			<Gallery></Gallery>
 			<Tabs></Tabs>
+			<AboutUs></AboutUs>
 		</div>
 	);
 };
