@@ -28,16 +28,17 @@ const ToysRow = ({ toy, toys, setToys }) => {
 			confirmButtonText: "Yes, delete it!",
 		}).then((result) => {
 			if (result.isConfirmed) {
-				fetch(`http://localhost:5000/myToys/${_id}`, {
+				fetch(`https://action-toys-server-amber.vercel.app/myToys/${_id}`, {
 					method: "DELETE",
 				})
 					.then((res) => res.json())
-					.then((data) => console.log(data));
-				if (data.deletedCount > 0) {
-					Swal.fire("Deleted!", "Your Toys has been deleted.", "success");
-					const remaining = toys.filter((tooy) => tooy._id !== _id);
-					setToys(remaining);
-				}
+					.then((data) => {
+						if (data.deletedCount > 0) {
+							Swal.fire("Deleted!", "Your Toys has been deleted.", "success");
+							const remaining = toys.filter((tooy) => tooy._id !== _id);
+							setToys(remaining);
+						}
+					});
 			}
 		});
 	};
