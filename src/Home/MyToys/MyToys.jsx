@@ -8,7 +8,7 @@ const MyToys = () => {
 	const [toys, setToys] = useState([]);
 
 	useEffect(() => {
-		fetch(`http://localhost:5000/myToys/${user?.email}`)
+		fetch(`https://action-toys-server-amber.vercel.app/myToys/${user?.email}`)
 			.then((res) => res.json())
 			.then((data) => setToys(data));
 	}, [toys]);
@@ -22,9 +22,8 @@ const MyToys = () => {
 						<option disabled selected>
 							Short by
 						</option>
-						<option >High to Low Price</option>
-						<option >Low to High Price</option>
-						
+						<option>High to Low Price</option>
+						<option>Low to High Price</option>
 					</select>
 				</div>
 				<div className="overflow-x-auto w-full">

@@ -64,7 +64,9 @@ const router = createBrowserRouter([
 					</PrivateRoute>
 				),
 				loader: ({ params }) =>
-					fetch(`http://localhost:5000/myToys/updateToy/${params.id}`),
+					fetch(
+						`https://action-toys-server-amber.vercel.app/myToys/updateToy/${params.id}`
+					),
 			},
 			{
 				path: "/details/:id",
@@ -74,7 +76,9 @@ const router = createBrowserRouter([
 					</PrivateRoute>
 				),
 				loader: ({ params }) =>
-					fetch(`http://localhost:5000/details/${params.id}`),
+					fetch(
+						`https://action-toys-server-amber.vercel.app/details/${params.id}`
+					),
 			},
 		],
 	},

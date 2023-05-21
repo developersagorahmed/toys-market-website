@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./UpdateToy.css";
-import {  useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateToy = () => {
@@ -22,11 +22,14 @@ const UpdateToy = () => {
 		event.preventDefault();
 
 		console.log(data);
-		fetch(`http://localhost:5000/myToys/updateToy/${_id}`, {
-			method: "PUT",
-			headers: { "content-Type": "application/json" },
-			body: JSON.stringify(data),
-		})
+		fetch(
+			`https://action-toys-server-amber.vercel.app/myToys/updateToy/${_id}`,
+			{
+				method: "PUT",
+				headers: { "content-Type": "application/json" },
+				body: JSON.stringify(data),
+			}
+		)
 			.then((res) => res.json())
 			.then((data) => {
 				console.log(data);
