@@ -7,9 +7,7 @@ const Tabs = () => {
 	console.log(activeTab);
 
 	useEffect(() => {
-		fetch(
-			`https://action-toys-server-amber.vercel.app/myToys/updateToy/alltoys/${activeTab}`
-		)
+		fetch(`https://action-toys-server-amber.vercel.app/alltoys/${activeTab}`)
 			.then((res) => res.json())
 			.then((result) => {
 				setToys(result);
